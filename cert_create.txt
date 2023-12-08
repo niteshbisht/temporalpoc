@@ -1,0 +1,6 @@
+set NAMESPACE_NAME=wm-innovdev
+certstrap init --common-name "WMINNOV"
+certstrap request-cert --common-name wm-innovdev
+certstrap sign wm-innovdev --CA "WMINNOV"
+
+openssl pkcs8 -topk8 -inform PEM -outform PEM -in out/wm-innovdev.key -out out/wm-innovdev.pkcs8.key -nocrypt
