@@ -4,3 +4,6 @@ certstrap request-cert --common-name wm-innovdev
 certstrap sign wm-innovdev --CA "WMINNOV"
 
 openssl pkcs8 -topk8 -inform PEM -outform PEM -in out/wm-innovdev.key -out out/wm-innovdev.pkcs8.key -nocrypt
+
+
+wm-innovdev.k7mt4.tmprl.cloud:7233
